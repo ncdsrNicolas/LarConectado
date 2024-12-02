@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_produtos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" href="img/logo1.png">
+    <title>Produtos - LarConectado</title>
+</head>
+
+<body>
+
+    <div id="topo"></div>
+    <nav class="navbar sticky-top navbar-expand-lg bg-custom-nav1">
+        <div class="container-fluid">
+            <img src="img/logo1.png" alt="Logo LarConectado" width="30" height="30">
+            <a class="title-custom-brand ms-2" aria-current="page" href="#home">LarConectado</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" id="userEmailNav">Usuário: karin1@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="javascript:void(0);"
+                            onclick="window.scrollTo(0, 0);"><i class="fas fa-arrow-up"></i> Voltar ao Topo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carrinho">
+                            <i class="fas fa-shopping-cart"></i>Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="javascript:void(0);" onclick="confirmLogout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="produtos" class="py-5">
+        <div class="container">
+            <h3 class="mb-4 text-center">Nossos Produtos</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+
+                <!-- Linha 1 - Geladeira -->
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/geladeira1.png" class="card-img-top" alt="Produto 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Geladeira 1</h5>
+                            <p class="card-text">Geladeira/Refrigerador Brastemp Frost Free BRM44 375 Litros - Evox - 220v (Brastemp - Inox)</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 2.858,99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Geladeira 1', 'R$ 2.858,99', 'img/geladeira1.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/geladeira2.png" class="card-img-top" alt="Produto 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Geladeira 2</h5>
+                            <p class="card-text">Geladeira Consul CRM44AB Frost Free Duplex 386 Litros com Altura Flex - 110v (Consul - Branca)</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 5.759,91</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Geladeira 2', 'R$ 5.759,91', 'img/geladeira2.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/geladeira3.png" class="card-img-top" alt="Produto 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Geladeira 3</h5>
+                            <p class="card-text">Geladeira Brastemp BRO85AK Frost Free Side Inverse 3 Portas A+++ 554 Litros Inox - 220v (Brastemp - Inox)</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 2.699,91</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Geladeira 3', 'R$ 2.699,91', 'img/geladeira3.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/geladeira4.png" class="card-img-top" alt="Produto 4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Geladeira 4</h5>
+                            <p class="card-text">Geladeira DB44S Inverse Frost Free 400 Litros Electrolux (Eletrolux - Inox)</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 3.898,99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Geladeira 4', 'R$ 3.898,99', 'img/geladeira4.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha 2 - Fogao -->
+
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/fogao1.png" class="card-img-top" alt="Produto 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Fogão 1</h5>
+                            <p class="card-text">Fogão Brastemp Piso 4 Bocas Duas Prateleiras Ajustáveis Inox Bivolt BFO4NBR</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 1.223,19</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Fogão 1', 'R$ 1.223,19', 'img/fogao1.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/fogao2.png" class="card-img-top" alt="Produto 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Fogão 2</h5>
+                            <p class="card-text">Fogão 5 bocas Electrolux Cinza Efficient com Mesa Inox, PerfectCook e VaporBake (FE5IC)</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 1.519,09</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Fogão 2', 'R$ 1.519,09', 'img/fogao2.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/fogao3.png" class="card-img-top" alt="Produto 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Fogão 3</h5>
+                            <p class="card-text">Fogão de Piso 4 Bocas Acendimento Automático Atlas Monaco Plus</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 568,99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Fogão 3', 'R$ 568,99', 'img/fogao3.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/fogao4.png" class="card-img-top" alt="Produto 4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Fogão 4</h5>
+                            <p class="card-text">Fogão Esmaltec Bali 6 Bocas Puxador de Aço Vidro Temperado Acendimento manual</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 773,91</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Fogão 4', 'R$ 773,91', 'img/fogao4.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Linha 3 - Microondas -->
+
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/microondas1.png" class="card-img-top" alt="Produto 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Micro-Ondas 1</h5>
+                            <p class="card-text">Micro-ondas Electrolux Branco 27L com 55 Receitas Pré-Programadas no Menu Online (MB37R)</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 589,99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Micro-Ondas 1', 'R$ 589,99', 'img/microondas1.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/microondas2.png" class="card-img-top" alt="Produto 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Micro-Ondas 2</h5>
+                            <p class="card-text">Micro-ondas Brastemp 20 litros Inox Espelhado BMS20 - 220V</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 482,29</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Micro-Ondas 2', 'R$ 482,29', 'img/microondas2.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/microondas3.png" class="card-img-top" alt="Produto 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Micro-Ondas 3</h5>
+                            <p class="card-text">Micro-ondas 21L Philco PMM24 Função Descongelar Preto</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 712,49</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Micro-Ondas 3', 'R$ 712,49', 'img/microondas3.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/microondas4.png" class="card-img-top" alt="Produto 4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Micro-Ondas 4</h5>
+                            <p class="card-text">Micro-ondas Mondial MO-02-34-E 1400W 34 Litros Inox - 110v</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 379,99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Micro-Ondas 4', 'R$ 379,99', 'img/microondas4.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Linha 4 - Maquina -->
+
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/maquina1.png" class="card-img-top" alt="Produto 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Máquina de Lavar 1</h5>
+                            <p class="card-text">Máquina de Lavar Consul 12kg CWH12BB Branca com Dosagem Extra Econômica e Ciclo Edredom - 110v</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 1.539,89</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Máquina de Lavar 1', 'R$ 1.539,89', 'img/maquina1.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/maquina2.png" class="card-img-top" alt="Produto 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Máquina de Lavar 2</h5>
+                            <p class="card-text">Lavadora de Roupas Electrolux 8,5Kg LES09 Branca Essencial Care - 110v</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 1.798,59</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Máquina de Lavar 2', 'R$ 1.798,59', 'img/maquina2.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/maquina3.png" class="card-img-top" alt="Produto 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Máquina de Lavar 3</h5>
+                            <p class="card-text">Máquina de Lavar Midea HealthGuard Smart 11kg Titanium MF200W110WB/GK </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 2.493,99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Máquina de Lavar 3', 'R$ 2.493,99', 'img/maquina3.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/maquina4.png" class="card-img-top" alt="Produto 4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Máquina de Lavar 4</h5>
+                            <p class="card-text">Lavadora de roupas storm wash Midea 11kg Inverter Tambor 4D LFA11B</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">R$ 3.102,89</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100"
+                                onclick="adicionarAoCarrinho('Máquina de Lavar 4', 'R$ 3.102,89', 'img/maquina4.png')">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="carrinho" class="py-5" style="background-color: rgb(209, 209, 209);">
+        <div class="container">
+            <h3 class="mb-3s">
+                <i class="fas fa-shopping-cart"></i>Carrinho
+            </h3>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Total: R$ <span id="totalCarrinho">0,00</span></h5>
+                <button class="btn btn-success d-flex align-items-center" onclick="realizarPedido()"><i
+                        class="fas fa-check-circle me-2"></i>Realizar Pedido</button>
+            </div>
+            <div class="border p-4" style="max-height: 300px; overflow-y: auto; border-style: none !important;">
+                <table class="table" style="background-color: rgb(209, 009, 209);">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagem</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Valor Unitário</th>
+                            <th scope="col">Valor Total</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">-</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaCarrinho">
+                    </tbody>
+                </table>
+            </div>
+            <button id="btnLimparCarrinho" class="btn btn-danger mt-3" onclick="limparCarrinho()"
+                style="display: none;">
+                <i class="fas fa-trash-alt"></i> Limpar Carrinho
+            </button>
+
+        </div>
+    </section>
+
+    <footer class="bg-custom-footer1 text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Redes Sociais</h5>
+                    <a href="https://www.facebook.com/" class="text-light social-link me-3"><i
+                            class="fab fa-facebook fa-lg"></i></a>
+                    <a href="https://x.com/?lang=pt-br" class="text-light social-link me-3"><i
+                            class="fab fa-twitter fa-lg"></i></a>
+                    <a href="https://www.instagram.com/" class="text-light social-link me-3"><i
+                            class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://br.linkedin.com/" class="text-light social-link"><i
+                            class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Navegação</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#topo" class="text-light footer-link text-decoration-none">Voltar ao topo</a></li>
+                        <li><a href="#carrinho" class="text-light footer-link text-decoration-none">Carrinho</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <p><i class="fas fa-envelope me-2"></i>LarConectado@gmail.com</p>
+                    <p><i class="fas fa-phone me-2"></i>(13) 98123-2665</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Praça 19 de Janeiro, 144 - Boqueirão, Praia Grande - SP
+                    </p>
+                </div>
+            </div>
+            <hr class="border-light">
+            <div class="text-center">
+                <p class="mb-0">© 2024 LarConectado. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script_produtos.js"></script>
+</body>
+
+</html>

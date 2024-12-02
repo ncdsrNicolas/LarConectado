@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="icon" href="img/logo1.png">
+  <title>Home - LarConectado</title>
+</head>
+
+<body>
+
+  <div id="home"></div>
+  <nav class="navbar sticky-top navbar-expand-lg bg-custom-nav1">
+    <div class="container-fluid">
+      <img src="img/logo1.png" alt="Logo LarConectado" width="30" height="30">
+      <a class="title-custom-brand ms-2" aria-current="page" href="#home">LarConectado</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#produtos">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/banner1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/banner2.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="sobre" class="container-fluid pt-5 bg-custom-sobre1">
+    <h1 class="text-center fs-2 text-dark">Sobre Nós</h1>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <img src="img/main1.png" alt="Imagem Exemplo" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="text-secondary">Eletrodomésticos de Ponta!</h2>
+          <p class="text-muted">
+            Nossa loja se dedica a oferecer eletrodomésticos de qualidade, tecnologia de ponta e preços acessíveis.
+            Trabalhamos com marcas confiáveis e prezamos pelo atendimento personalizado, garantindo uma experiência de
+            compra simples e satisfatória. Transforme sua casa com a nossa ajuda!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pt-4 bg-custom-sobre2">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="text-secondary text-custom-2">Quem somos e<br>O que fazemos?</h2>
+          <p class="text-light text-custom-1">Fundada em 2007, nossa loja é especializada na venda de eletrodomésticos que aliam
+            qualidade, inovação e preços acessíveis. Com mais de uma década de experiência no mercado, oferecemos aos
+            nossos clientes uma seleção de produtos de marcas confiáveis, ideais para tornar o dia a dia mais prático e
+            confortável.<br><br>
+            Nosso compromisso vai além de oferecer ótimos produtos. Valorizamos o atendimento personalizado, garantindo
+            que cada cliente encontre a solução perfeita para suas necessidades. Priorizamos uma experiência de compra
+            simples, segura e satisfatória, refletindo nosso objetivo de transformar sua casa em um lar funcional e
+            moderno.
+            Conte conosco para equipar sua casa com o que há de melhor no mercado de eletrodomésticos!
+          </p>
+          <a href="#produtos"><button class="btn btn-primary mt-3 mb-3">Saiba Mais!</button></a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <img src="img/main2.png" alt="Imagem Exemplo" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="produtos" class="container py-5">
+    <h2 class="text-center mb-4">Nossos Produtos</h2>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/maquina1.png" class="card-img-top" alt="Produto 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Máquina de Lavar 1</h5>
+            <p class="card-text">Máquina de Lavar Consul 12kg CWH12BB Branca com Dosagem Extra Econômica e Ciclo Edredom
+              - 110v</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 1.539,89</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/maquina2.png" class="card-img-top" alt="Produto 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Máquina de Lavar 2</h5>
+            <p class="card-text">Lavadora de Roupas Electrolux 8,5Kg LES09 Branca Essencial Care - 110v</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 1.798,59</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/microondas3.png" class="card-img-top" alt="Produto 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Micro-Ondas 3</h5>
+            <p class="card-text">Micro-ondas 21L Philco PMM24 Função Descongelar Preto</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 712,49</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/microondas4.png" class="card-img-top" alt="Produto 4">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Micro-Ondas 4</h5>
+            <p class="card-text">Micro-ondas Mondial MO-02-34-E 1400W 34 Litros Inox - 110v</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 379,99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/geladeira1.png" class="card-img-top" alt="Produto 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Geladeira 1</h5>
+            <p class="card-text">Geladeira/Refrigerador Brastemp Frost Free BRM44 375 Litros - Evox - 220v (Brastemp -
+              Inox)</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 2.858,99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/geladeira2.png" class="card-img-top" alt="Produto 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Geladeira 2</h5>
+            <p class="card-text">Geladeira Consul CRM44AB Frost Free Duplex 386 Litros com Altura Flex - 110v (Consul -
+              Branca)</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 5.759,91</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/fogao3.png" class="card-img-top" alt="Produto 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Fogão 3</h5>
+            <p class="card-text">Fogão de Piso 4 Bocas Acendimento Automático Atlas Monaco Plus</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 568,99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="img/fogao4.png" class="card-img-top" alt="Produto 4">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Fogão 4</h5>
+            <p class="card-text">Fogão Esmaltec Bali 6 Bocas Puxador de Aço Vidro Temperado Acendimento manual</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="price">R$ 773,91</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary mt-3 mb-3 btn-lg btn-block w-100" data-bs-toggle="modal"
+      data-bs-target="#loginModal">Compre Agora!</a>
+  </div>
+  </div>
+
+
+  <div id="contato" class="container-fluid py-5 bg-custom-contato1">
+    <div class="row align-items-center">
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="img/logo1.png" alt="Contato" class="img-fluid rounded" width="100px" height="100px">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-dark mb-4 mt-3">Entre em Contato</h2>
+        <form id="contactForm">
+          <div class="mb-3 me-5">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
+          </div>
+          <div class="mb-3 me-5">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="Seu e-mail" required>
+          </div>
+          <div class="mb-3 me-5">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-custom-footer1 text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5>Redes Sociais</h5>
+          <a href="https://www.facebook.com/" class="text-light social-link me-3"><i
+              class="fab fa-facebook fa-lg"></i></a>
+          <a href="https://x.com/?lang=pt-br" class="text-light social-link me-3"><i
+              class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://www.instagram.com/" class="text-light social-link me-3"><i
+              class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://br.linkedin.com/" class="text-light social-link"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5>Navegação</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-light footer-link text-decoration-none">Home</a></li>
+            <li><a href="#sobre" class="text-light footer-link text-decoration-none">Sobre Nós</a></li>
+            <li><a href="#produtos" class="text-light footer-link text-decoration-none">Produtos</a></li>
+            <li><a href="#contato" class="text-light footer-link text-decoration-none">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contato</h5>
+          <p><i class="fas fa-envelope me-2"></i>LarConectado@gmail.com</p>
+          <p><i class="fas fa-phone me-2"></i>(13) 98123-2665</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Praça 19 de Janeiro, 144 - Boqueirão, Praia Grande - SP</p>
+        </div>
+      </div>
+      <hr class="border-light">
+      <div class="text-center">
+        <p class="mb-0">© 2024 LarConectado. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="emailForm" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="passwordForm" placeholder="Digite sua senha" required>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
