@@ -185,3 +185,7 @@
 .text-custom-1{
     color: whitesmoke;
 }
+
+.price{
+    font-weight: bold;
+}
