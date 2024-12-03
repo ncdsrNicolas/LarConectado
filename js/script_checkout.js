@@ -79,23 +79,28 @@ function finalizarPedido() {
         { id: "endereco", nome: "Endereço" },
         { id: "numero", nome: "Número" },
         { id: "bairro", nome: "Bairro" },
-        { id: "cidade", nome: "Cidade" }
+        { id: "cidade", nome: "Cidade" },
+        { id: "estado", nome: "Estado" }
     ];
 
-    $(".erro-msg").remove();
+    $(".erro-msg").remove(); // Remove mensagens de erro antigas
 
     campos.forEach(function(campo) {
         var input = $("#" + campo.id);
-        if (!input.val()) {
+        if (!input.val() || input.val() === "") {
             camposVazios = true;
-            input.after('<p class="erro-msg text-danger">O campo ' + campo.nome + ' é obrigatório!</p>');
+            if (!input.next().hasClass("erro-msg")) { // Evitar múltiplas mensagens
+                input.after('<p class="erro-msg text-danger">O campo ' + campo.nome + ' é obrigatório!</p>');
+            }
         }
     });
 
     var email = $("#email").val();
     if (email && !validateEmail(email)) {
         camposVazios = true;
-        $("#email").after('<p class="erro-msg text-danger">O email inserido é inválido!</p>');
+        if (!$("#email").next().hasClass("erro-msg")) {
+            $("#email").after('<p class="erro-msg text-danger">O email inserido é inválido!</p>');
+        }
     }
 
     if (camposVazios) {
@@ -109,7 +114,29 @@ function finalizarPedido() {
     }
 }
 
+document.getElementById("estado").addEventListener("change", function() {
+    const erroMsg = this.nextElementSibling;
+    if (erroMsg && erroMsg.classList.contains("erro-msg")) {
+        erroMsg.remove();
+    }
+});
+
 function validateEmail(email) {
     var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return re.test(email);
+}
+
+function limparCampos() {
+    const inputs = document.querySelectorAll('#formCheckout input, #formCheckout select');
+    inputs.forEach(input => input.value = '');
+    const camposCep = ['endereco', 'bairro', 'cidade', 'estado'];
+    camposCep.forEach(id => {
+        const campo = document.getElementById(id);
+        if (campo) {
+            campo.value = '';
+        }
+    });
+    $(".erro-msg").remove();
+
+    alert("Todos os campos foram limpos!");
 }
